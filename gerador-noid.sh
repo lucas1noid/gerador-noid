@@ -21,6 +21,12 @@ Opções:
 O comportamento padrão do script é gerar uma senha de 10 caracteres."
 fi
 
+if [ "$1" = "-p" ]; then
+        echo "Senhas geradas" 
+        cat senhas.txt
+exit
+fi
+
 # Imprime a senha gerada
 # Adicione aqui também a implementação do código que salva a senha no passwords.txt e cria o arquivo caso ele não exista
 # Dica: lembre-se de utilizar o operador "-e" junto com a condicional "if"!
@@ -31,3 +37,4 @@ else
 	touch senhas.txt
 	echo "$senha" >> senhas.txt
 fi
+
