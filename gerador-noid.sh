@@ -25,4 +25,9 @@ fi
 # Adicione aqui também a implementação do código que salva a senha no passwords.txt e cria o arquivo caso ele não exista
 # Dica: lembre-se de utilizar o operador "-e" junto com a condicional "if"!
 echo "Senha gerada: $senha"
-
+if [ -e senhas.txt ]; then
+	echo "$senha" >> senhas.txt
+else 
+	touch senhas.txt
+	echo "$senha" >> senhas.txt
+fi
