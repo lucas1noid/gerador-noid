@@ -9,8 +9,8 @@ senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
 # Interpretar os argumentos:
 # (Complete o código com as outras funcionalidades usando o elif)
 if [ "$1" = "-h" ]; then
-  echo -e "Bem vindo ao password-generator! Versão 1.0, (c) 2025, Fulano de Tal,DIMAp, UFRN
-Uso: ./password-generator.sh [OPÇÕES]:
+  echo -e "Bem vindo ao gerador-noid! Versão 1.0, (c) 2025, Fulano de Tal,DIMAp, UFRN
+Uso: ./gerador-noid.sh [OPÇÕES]:
 
 Opções:
 
@@ -18,7 +18,7 @@ Opções:
 -c : Limpar as senhas do arquivo passwords.txt
 -h : Exibir esse menu
 
-O comportamento padrão do script é gerar uma senha de 8 caracteres minúsculos."
+O comportamento padrão do script é gerar uma senha de 10 caracteres."
 fi
 
 # Imprime a senha gerada
