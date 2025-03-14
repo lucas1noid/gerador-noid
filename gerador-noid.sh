@@ -15,7 +15,7 @@ Uso: ./gerador-noid.sh [OPÇÕES]:
 Opções:
 
 -p : Listar as senhas geradas
--c : Limpar as senhas do arquivo passwords.txt
+-c : Limpar as senhas do arquivo senhas.txt
 -h : Exibir esse menu
 
 O comportamento padrão do script é gerar uma senha de 10 caracteres."
@@ -26,7 +26,10 @@ if [ "$1" = "-p" ]; then
         cat senhas.txt
 exit
 fi
-
+if [ "$1" = "-c" ]; then
+	echo  > senhas.txt
+exit
+fi
 # Imprime a senha gerada
 # Adicione aqui também a implementação do código que salva a senha no passwords.txt e cria o arquivo caso ele não exista
 # Dica: lembre-se de utilizar o operador "-e" junto com a condicional "if"!
