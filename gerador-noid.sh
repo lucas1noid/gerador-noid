@@ -9,7 +9,7 @@ senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
 # Interpretar os argumentos:
 # (Complete o código com as outras funcionalidades usando o elif)
 if [ "$1" = "-h" ]; then
-  echo -e "Bem vindo ao gerador-noid! Versão 1.0, (c) 2025, Fulano de Tal,DIMAp, UFRN
+  echo -e "Bem vindo ao gerador-noid! Versão 1.0, (c) 2025, Lucas e Nicolas,DIMAp, UFRN
 Uso: ./gerador-noid.sh [OPÇÕES]:
 
 Opções:
@@ -19,6 +19,7 @@ Opções:
 -h : Exibir esse menu
 
 O comportamento padrão do script é gerar uma senha de 10 caracteres."
+exit
 fi
 
 if [ "$1" = "-p" ]; then
